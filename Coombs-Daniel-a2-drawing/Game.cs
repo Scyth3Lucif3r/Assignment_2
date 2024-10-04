@@ -80,13 +80,19 @@ namespace Game10003
                 }
 
             }
-            /*
-            // Draw pellets
-            Draw.FillColor = Color.White;
-            for (int i = 0; i < xCoordinates.Length; i++)
+            
+            // Make Windows
+            Draw.FillColor = grayWindow;
+            for (int i = 0; i < 6; i++)
             {
-                Draw.Circle(xCoordinates[i], yCoordinates[i], pelletRadius);
-            } */
+                for(int j = 0; j < 8; j++)
+                {
+                    int xCord = i * 40;
+                    int yCord = j * 40;
+                    Draw.Square(90 + xCord, 90 + yCord, 20);
+                }
+                
+            } 
         }
     }
 }
